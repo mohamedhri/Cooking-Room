@@ -152,3 +152,51 @@ function getData(){
 }
     }
 getData();
+
+
+function populateCategoryFilter() {
+    let categories = new Set(); 
+
+    for (let i = 0; i < ArryRecipes.length; i++) {
+        categories.add(ArryRecipes[i].category);
+    }
+
+    
+    const categoryFilterSelect = document.getElementById("category-filter");
+    categories.forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.text = category;
+        categoryFilterSelect.appendChild(option);
+    });
+}
+
+
+function filterRecipesByCategory(category) {
+    document.getElementById("container").innerHTML = ""; 
+
+    for (let i = 0; i < ArryRecipes.length; i++) {
+        if (category === "all" || ArryRecipes[i].category === category) {
+            document.getElementById("container").innerHTML += `
+                <div class="wrapper-recipes">
+                    <div class="wrapper-card">
+                        <div class="card-recipes">
+                            <div class="img">
+                                <img src="${ArryRecipes[i].photo}" width="100%" alt="" id="img-recipes">
+                            </div>
+                            <div class="content-recipes">
+                                <h2>${ArryRecipes[i].title}</h2>
+                                <h3>${ArryRecipes[i].title2}<span>${ArryRecipes[i].made}</span></h3>
+                            </div>
+                            <div class="comments">
+                                <h3 class="commenters"><img src="icons/chat (1).png" width="20px">&nbsp;${ArryRecipes[i].comments.length}</h3>
+                                <h3 class="likes"><img src="/icons/love.png" width="20px">&nbsp;${ArryRecipes[i].likes}</h3>
+                                <h3 class="contry"><img src="${ArryRecipes[i].country}" width="20px"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    }
+}
