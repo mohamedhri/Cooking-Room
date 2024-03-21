@@ -277,3 +277,40 @@ header{
     border-radius: 5px;
     outline: none;
 }
+
+
+/* Page_Home : */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 40px;
+   
+}
+
+.titre{
+    font-family:"HoloLens MDL2 Assets";
+    font-size: 66px;
+}
+.container{
+    display: flex ;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    
+}
+#contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
