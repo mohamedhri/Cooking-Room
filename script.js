@@ -9,6 +9,7 @@ let ArryRecipes = [
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "oussama charafi",
+        category: "Salad"
     },
     {
         photo: "ropa.jpeg",
@@ -20,6 +21,8 @@ let ArryRecipes = [
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "yassine oularbi",
+        category: "Salad"
+
     },
     {
         photo: "ropa.jpeg",
@@ -31,6 +34,7 @@ let ArryRecipes = [
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "salma baouch",
+        category: "Pizza"
     },
     {
         photo: "ropa.jpeg",
@@ -42,6 +46,7 @@ let ArryRecipes = [
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "mohamed amine",
+        category: "Pasta"
     },
     {
         photo: "ropa.jpeg",
@@ -53,6 +58,7 @@ let ArryRecipes = [
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "oussama charafi",
+        category: "Chicken"
     },
     {
         photo: "ropa.jpeg",
@@ -64,6 +70,7 @@ let ArryRecipes = [
         comments : ["ss","ee",44.443,44,556,445,445,],
         country :"./icons/france.png",
         userName : "oussama charafi",
+        category: "Soup"
     },
 ]
 
@@ -200,3 +207,10 @@ function filterRecipesByCategory(category) {
         }
     }
 }
+populateCategoryFilter();
+
+
+document.getElementById("category-filter").addEventListener("change", function() {
+    const selectedCategory = this.value;
+    filterRecipesByCategory(selectedCategory);
+});
