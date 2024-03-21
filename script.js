@@ -66,7 +66,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
+        likes: 230,
         comments : ["ss","ee",44.443,44,556,445,445,],
         country :"./icons/france.png",
         userName : "oussama charafi",
