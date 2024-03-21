@@ -260,20 +260,20 @@ header{
     border-right: .5px solid black;
 }
 /* mohamed haouari  */
-.filter-section {
+/* .filter-section {
     margin-top: 20px;
-}
+} */
 
-.filter-section h3 {
+/* .filter-section h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-}
+} */
 
 #category-filter {
     width: 100%;
-    padding: 8px;
+    padding: 7px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+    border-radius: 25px;
+
 }
