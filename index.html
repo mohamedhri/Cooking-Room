@@ -68,27 +68,36 @@
             </div>
     </div>
 
-    <div class="section-wrapper-recipes">
-        <div class="recipes" id="container">
+        <div class="section-wrapper-recipes">
+                <div class="recipes" id="container">
 
-       
             
-        </div>
-        <div class="humains">
-                <div class="wrapper-users">
-                    <h3 id="users-title">Users Recipes</h3>
-                    <div class="users" id="users">
-                    </div>
+                    
                 </div>
-                <div class="filter-section">
-                    <h3>Filter by Category</h3>
-                    <select id="category-filter">
-                        <option value="all">All</option>
-                        
-                    </select>
+               
+
+
+                <div class="humains">
+
+
+                        <div class="wrapper-users">
+                            <h3 id="users-title">Users Recipes</h3>
+                            <div class="users" id="users"></div>
+                        </div>
+
+
+                        <div class="filter-section">
+                            <h3>Filter by Category</h3>
+                            <select id="category-filter">
+                                <option value="all">All</option>
+                                
+                            </select>
+                        </div>
+
+
                 </div>
-            </div>
         </div>
+
         <input type="file" id="P1">
         <input type="text" id="P2">
         <input type="text" id="P3">
@@ -99,7 +108,27 @@
         <input type="file" id="P8">
         <input type="text" id="P9">
         <button id="send">send</button>
-    </div>
+
+        <div class="row" id="recipe-list">
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center" >
+                <li class="page-item" id="previous-button">
+                    <a class="page-link custom-previous-button " href="#">Précédent</a>
+                </li>
+                <li class="page-item"><a class="page-link custom-page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link custom-page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link custom-page-link" href="#">3</a></li>
+                <li class="page-item" id="next-button">
+                    <a class="page-link custom-next-button" href="#">Suivant</a>
+                </li>
+            </ul>
+        </nav>
+
+
+       
+   
+    
 
 
 
