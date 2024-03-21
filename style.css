@@ -302,7 +302,7 @@ header{
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background: #ffefef;
+    background: #f2efef;
 }
 .form > input {
     max-width: 200px;
