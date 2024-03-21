@@ -277,3 +277,59 @@ header{
     border-radius: 25px;
 
 }
+.wrapper-add{
+    margin-top: 5px;
+    background: white;
+    color: red;
+    padding: 10px;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    border-radius: 12px;
+    text-align: center;
+}
+#image_input {
+    display: none;
+}
+#label-img{
+    padding: 10px;
+    border: 1px dashed red;
+    max-width: 150px;
+    cursor: pointer;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background: #f2efef;
+}
+.form > input {
+    max-width: 200px;
+    margin: 2px auto;
+    padding: 8px 10px;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    border: none;
+    border-radius: 8px;
+}
+.form > button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: 1px solid red;
+    border-radius: 12px ;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    color: red;
+    font-weight: 800;
+    transition: .6s;
+    text-transform: uppercase;
+}
+.form > button:hover{
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 12px ;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    background: red;
+    color: white;
+    font-weight: 800;
+}

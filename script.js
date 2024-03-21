@@ -5,7 +5,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
+        likes: 20,
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "oussama charafi",
@@ -17,7 +17,7 @@ let ArryRecipes = [
         title2 : "Glasse apple",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
+        likes: 100,
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "yassine oularbi",
@@ -30,7 +30,7 @@ let ArryRecipes = [
         title2 : "marocain pizza",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
+        likes: 33,
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "salma baouch",
@@ -42,7 +42,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
+        likes: 50,
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "mohamed amine",
@@ -54,7 +54,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
+        likes:23,
         comments : [33,44,5,6,4,5,4,5],
         country :"./icons/france.png",
         userName : "oussama charafi",
@@ -66,7 +66,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
+        likes: 230,
         comments : ["ss","ee",44.443,44,556,445,445,],
         country :"./icons/france.png",
         userName : "oussama charafi",
@@ -214,3 +214,13 @@ document.getElementById("category-filter").addEventListener("change", function()
     const selectedCategory = this.value;
     filterRecipesByCategory(selectedCategory);
 });
+
+function bubbleSort(){
+    ArryRecipes.sort(function(a , b){
+        return b.likes - a.likes;
+    })
+    document.getElementById("container").innerHTML =""; 
+    document.getElementById("users").innerHTML ="";
+    getData();
+}
+bubbleSort();
