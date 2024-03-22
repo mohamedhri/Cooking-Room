@@ -121,28 +121,28 @@ function AddCard(){
 
 
 
-    function getData() {
-        for (let i = 0; i < ArryRecipes.length; i++) {
+    function getData(recipes) {
+        for (let i = 0; i < recipes.length; i++) {
             document.getElementById("container").innerHTML +=
                 `
             <div class="wrapper-recipes">
                 <div class="wrapper-card">
                     <div class="card-recipes">
                         <div class="img">
-                            <img src="${ArryRecipes[i].photo}" width="100%" alt="" id="img-recipes">
+                            <img src="${recipes[i].photo}" width="100%" alt="" id="img-recipes">
                         </div>
                         <div class="content-recipes">
-                            <h2>${ArryRecipes[i].title}</h2>
-                            <h3>${ArryRecipes[i].title2}<span>${ArryRecipes[i].made}</span></h3>
+                            <h2>${recipes[i].title}</h2>
+                            <h3>${recipes[i].title2}<span>${recipes[i].made}</span></h3>
                         </div>
                         <div class="comments">
                             <span class="parent-com">
                                 <input type="text" class="comments-card" placeholder="Commenter">
                                 <button class="add-com"><img src="icons/send.png"/></button>
                             </span>
-                            <h3 class="commenters"><img src="icons/chat.png" width="20px">&nbsp;${ArryRecipes[i].comments.length}</h3>
-                            <h3 class="likes"><img src="icons/love.png" width="20px">&nbsp;${ArryRecipes[i].likes}</h3>
-                            <h3 class="contry"><img src="${ArryRecipes[i].country}" width="20px"></h3>
+                            <h3 class="commenters"><img src="icons/chat.png" width="20px">&nbsp;${recipes[i].comments.length}</h3>
+                            <h3 class="likes"><img src="icons/love.png" width="20px">&nbsp;${recipes[i].likes}</h3>
+                            <h3 class="contry"><img src="${recipes[i].country}" width="20px"></h3>
                         </div>
                     </div>
                 </div>
@@ -154,8 +154,8 @@ function AddCard(){
             <div class="users-content">
                 <div class="full-name">
                     <h4 class="user-img"><img src="images/profile.png" width="25px" alt=""></h4>
-                    <h4 class="user-name">${ArryRecipes[i].userName}</h4>
-                    <h4 class="user-recipes">${ArryRecipes[i].title2}</h4>
+                    <h4 class="user-name">${recipes[i].userName}</h4>
+                    <h4 class="user-recipes">${recipes[i].title2}</h4>
                     <h4 class="status">Now</h4>
                 </div>
             </div>
@@ -163,7 +163,7 @@ function AddCard(){
         }
         addCom();
     }
-getData();
+
 
 function addCom() {
     document.querySelectorAll(".commenters").forEach(function (commentElement, index) {
@@ -203,39 +203,40 @@ function addCom() {
 
 
 
-    // function paginate(array, page_size, page_number) {
+function paginate(array, page_size, page_number) {
        
-    //     return array.slice((page_number - 1) * page_size, page_number * page_size);
-    // }
+    return array.slice((page_number - 1) * page_size, page_number * page_size);
+}
 
 
-// function pagination(){
+function pagination(){
 
-//     document.addEventListener("DOMContentLoaded", function() {
-//         const size = 3; 
-//         let currentPage = 1;
-//         getData(paginate(ArryRecipes, size, currentPage));
-//         const paginationLinks = document.querySelectorAll(".page-link");
-//         paginationLinks.forEach(link => {
-//             link.addEventListener("click", function(e) {
-//                 e.preventDefault();
-//                 const pageNumber = parseInt(e.target.innerText);
-    
-//                 if (!isNaN(pageNumber)) {
-//                     currentPage = pageNumber;
-//                     document.getElementById("users").innerHTML ="";
-//                     document.getElementById("container").innerHTML ="" 
-                    
-//                     getData(paginate(ArryRecipes, size, currentPage));
-//                 }
-    
-//             });
-           
-//         });
-//     });
+document.addEventListener("DOMContentLoaded", function() {
+    const size = 3; 
+    let currentPage = 1;
+    getData(paginate(ArryRecipes, size, currentPage));
+    const paginationLinks = document.querySelectorAll(".page-link");
+    paginationLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const pageNumber = parseInt(e.target.innerText);
 
-// }
-// pagination();
+            if (!isNaN(pageNumber)) {
+                currentPage = pageNumber;
+                document.getElementById("users").innerHTML ="";
+                document.getElementById("container").innerHTML ="" 
+                
+                getData(paginate(ArryRecipes, size, currentPage));
+            }
+
+        });
+       
+    });
+});
+
+}
+pagination();
+
 
 
 
