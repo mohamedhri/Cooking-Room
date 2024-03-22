@@ -12,7 +12,7 @@ let ArryRecipes = [
         category: "Salad"
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa1.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "Glasse apple",
         descreption : "Salade nesoiase",
@@ -25,7 +25,7 @@ let ArryRecipes = [
 
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa2.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "marocain pizza",
         descreption : "Salade nesoiase",
@@ -37,7 +37,7 @@ let ArryRecipes = [
         category: "Pizza"
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa3.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
@@ -49,7 +49,7 @@ let ArryRecipes = [
         category: "Pasta"
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa4.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
@@ -61,7 +61,11 @@ let ArryRecipes = [
         category: "Chicken"
     },
     {
+<<<<<<< refs/remotes/origin/updateRecettes
         photo: "ropa.jpeg",
+=======
+        photo: "images/ropa5.jpg",
+>>>>>>> local
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
@@ -72,6 +76,71 @@ let ArryRecipes = [
         userName : "oussama charafi",
         category: "Soup"
     },
+<<<<<<< refs/remotes/origin/updateRecettes
+=======
+    {
+        photo: "images/ropa1.jpg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "Glasse apple",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 100,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "yassine oularbi",
+        category: "Salad"
+
+    },
+    {
+        photo: "images/ropa2.jpg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "marocain pizza",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 33,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "salma baouch",
+        category: "Pizza"
+    },
+    {
+        photo: "images/ropa3.jpg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 50,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "mohamed amine",
+        category: "Pasta"
+    },
+    {
+        photo: "images/ropa4.jpg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes:23,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Chicken"
+    },
+    {
+        photo: "images/ropa5.jpg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    }
+    
+>>>>>>> local
 ]
 
 
@@ -168,6 +237,7 @@ getData();
 function addCom() {
     document.querySelectorAll(".commenters").forEach(function (commentElement, index) {
         const parentCom = document.querySelectorAll(".parent-com")[index];
+        parentCom.style.display = "none";
         commentElement.addEventListener("click", () => {
             if (parentCom.style.display === "none") {
                 parentCom.style.display = "flex";
@@ -184,13 +254,14 @@ function addCom() {
             const commentInput = document.querySelectorAll(".comments-card")[indexElement]; 
             const comValue = commentInput.value;
             ArryRecipes[indexElement].comments.push(comValue);
+            console.log("oussama");
 
-            const parentCom = document.querySelectorAll(".parent-com")[indexElement];
-            parentCom.style.display = "none";
+            // const parentCom = document.querySelectorAll(".parent-com")[indexElement];
+            // parentCom.style.display = "none";
 
             document.getElementById("container").innerHTML = "";
             document.getElementById("users").innerHTML = "";
-            getData();
+            getData(ArryRecipes);
 
             console.log(indexElement);
         })

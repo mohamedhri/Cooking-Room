@@ -170,13 +170,13 @@ header{
 }
 .img{
     width: 80%;
-    background: white;
     margin: 0 auto;
-    box-shadow: 4px 4px 10px #dbdcdb;
 }
 #img-recipes{
     margin-top: -50px;
+    height: 150px;
     border-radius: 5px;
+    box-shadow: 8px 8px 10px #787777;
 }
 .content-recipes{
     width: 90%;
@@ -360,8 +360,129 @@ header{
     border: none;
     border-radius: 12px;
     outline: none;
+<<<<<<< refs/remotes/origin/updateRecettes
     box-shadow: 4px 4px 10px #dbdcdb;
     margin-right: 5px;
+=======
+    margin-right: 5px;
+    font-size: 14px;
+    
+}
+.add-com{
+    transition: .6s;
+}
+.add-com:hover{
+    transform: rotate(45deg);
+}
+.pagin{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#numero{
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+}
+.w3-bar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 50px;
+    width: 650px;
+    margin-left: 25px;
+}
+.w3-bar > a{
+    padding:15px 25px ;
+    font-size: 14px;
+}
+
+/* Page_Home : */
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 40px;
+   
+}
+
+.titre{
+    font-family:"HoloLens MDL2 Assets";
+    font-size: 66px;
+}
+.container{
+    display: flex ;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    
+}
+#contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.img{
+    width: 160px;
+    height: 130px;
+    border-radius:4px;
+}
+#btnAdd {
+     background-color: #df0051; /* Green color */
+     border-radius: calc(infinity * 1px);
+     color: white;
+     border: none;
+     padding: 13px 39px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 11px;
+    font-weight: bold;
+    margin-top: 10px;
+     cursor: pointer;
+ }
+#btnAdd:hover {
+    background-color: #ec1fd8; /* Darker green on hover */
+}
+#BtnDeExplore {
+    border: none;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+#BtnDeExplore::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px; /* Extends line 20px to the left */
+    width: calc(100% + 40px); /* Extends line 20px on both sides */
+    height: 2px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+#BtnDeExplore:hover::after {
+    width: calc(100% + 40px); /* Maintain extended width on hover */
+}
+
+#part >p >span{
+    color: #df0051;
+>>>>>>> local
 }
 .add-com{
     border: none;
