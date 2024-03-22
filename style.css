@@ -142,7 +142,7 @@ header{
 .section-wrapper-recipes{
     width: 90%;
     display: flex;
-    padding: 50px 20px;
+    padding: 50px 20px 0px 20px;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -155,7 +155,6 @@ header{
 }
 .humains{
     width: 35%;
-    border: 1px solid black;
     padding: 10px;
 }
 
@@ -302,7 +301,7 @@ header{
 }
 #label-img{
     padding: 10px;
-    border: 1px dashed red;
+    border: 1px dashed rgb(244, 141, 141);
     max-width: 150px;
     cursor: pointer;
     margin: 10px auto;
@@ -313,7 +312,6 @@ header{
     flex-direction: column;
     text-align: center;
     width: 100%;
-    background: #f2efef;
 }
 .form > input {
     max-width: 200px;
@@ -326,10 +324,10 @@ header{
 .form > button {
     margin: 10px auto;
     padding: 10px 20px;
-    border: 1px solid red;
+   
     border-radius: 12px ;
     box-shadow: 4px 4px 10px #dbdcdb;
-    color: red;
+    
     font-weight: 800;
     transition: .6s;
     text-transform: uppercase;
@@ -360,9 +358,31 @@ header{
     border: none;
     border-radius: 12px;
     outline: none;
- Page_Home
+ 
 }
-
+.pagin{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#numero{
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+}
+.w3-bar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: white;
+    border-radius: 50px;
+    width: 650px;
+    margin-left: 25px;
+}
+.w3-bar > a{
+    padding:15px 25px ;
+    font-size: 14px;
+}
 
 /* Page_Home : */
 *{
@@ -455,10 +475,6 @@ section{
     color: #df0051;
 }
 
-=======
-    box-shadow: 4px 4px 10px #dbdcdb;
-    margin-right: 5px;
-}
 .add-com{
     border: none;
     padding: 10px;

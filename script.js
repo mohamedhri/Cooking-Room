@@ -72,22 +72,129 @@ let ArryRecipes = [
         userName : "oussama charafi",
         category: "Soup"
     },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
+    {
+        photo: "ropa.jpeg",
+        title : "Cream prawen,inspired by morocco",
+        title2 : "salade Perry",
+        descreption : "Salade nesoiase",
+        made : " made by morroco",
+        likes: 230,
+        comments : [],
+        country :"./icons/france.png",
+        userName : "oussama charafi",
+        category: "Soup"
+    },
 ]
 
 
-let input1=document.getElementById("P1")
-let input2=document.getElementById("P2")
-let input3=document.getElementById("P3")
-let input4=document.getElementById("P4")
-let input5=document.getElementById("P5")
-let input6=document.getElementById("P6")
-let input7=document.getElementById("P7")
-let input8=document.getElementById("P8")
-let input9=document.getElementById("P9")
+let input1=document.getElementById("image_input")
+let input2=document.getElementById("title_input")
+let input3=document.getElementById("title2_input")
+let input4=document.getElementById("description_input")
+let input5=document.getElementById("made_input")
+let input6=document.getElementById("user_input")
+
+
+
 
 
 function AddCard(){
-
 
     const card = {
         photo: input1.files.length > 0 ? URL.createObjectURL(input1.files[0]) : '',
@@ -95,30 +202,26 @@ function AddCard(){
         title2:input3.value,
         descreption:input4.value,
         made:input5.value,
-        likes:input6.value,
-        comments:input7.value,
-        country:input8.files.length>0 ? URL.createObjectURL(input1.files[0]) : '',
-        userName:input9.value,
+        likes:20,
+        comments:[],
+        country:"./icons/france.png",
+        userName:input6.value,
     }
     
     ArryRecipes.push(card);
 }
     
     document.getElementById("send").onclick = function(){
-        document.getElementById("container").innerHTML =""; 
-        document.getElementById("users").innerHTML ="";
-
-        let imgrecipes=document.getElementById('img-recipes');
+       
+        let imgrecipes=document.getElementById('image_input');
         input1.onchange=function(){
             imgrecipes.src=URL.createObjectURL(input1.files[0])
         }
     
         AddCard();
-        getData();
+        getData(recipes);
     }
    
-
-
 
 
     function getData(recipes) {
@@ -212,7 +315,7 @@ function paginate(array, page_size, page_number) {
 function pagination(){
 
 document.addEventListener("DOMContentLoaded", function() {
-    const size = 3; 
+    const size = 6; 
     let currentPage = 1;
     getData(paginate(ArryRecipes, size, currentPage));
     const paginationLinks = document.querySelectorAll(".page-link");
@@ -232,7 +335,29 @@ document.addEventListener("DOMContentLoaded", function() {
         });
        
     });
+    document.getElementById("previous-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+            currentPage--;
+            document.getElementById("users").innerHTML ="";
+            document.getElementById("container").innerHTML ="" 
+            getData(paginate(ArryRecipes, size, currentPage));
+        }
+    });
+    
+    document.getElementById("next-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage > 0) {
+            currentPage++;
+            document.getElementById("users").innerHTML ="";
+            document.getElementById("container").innerHTML ="" 
+            getData(paginate(ArryRecipes, size, currentPage));
+        }
+    });
+  
 });
+
+
 
 }
 pagination();
@@ -242,21 +367,8 @@ pagination();
 
 
 
-    // document.getElementById("previous-button").addEventListener("click", function(e) {
-    //     e.preventDefault();
-    //     if (currentPage > 1) {
-    //         currentPage--;
-    //         displayRecipes(paginate(recipes, PAGE_SIZE, currentPage));
-    //     }
-    // });
 
-    // document.getElementById("next-button").addEventListener("click", function(e) {
-    //     e.preventDefault();
-    //     if (currentPage > 0) {
-    //         currentPage++;
-    //         displayRecipes(paginate(recipes, PAGE_SIZE, currentPage));
-    //     }
-    // });
+  
 
 
 
