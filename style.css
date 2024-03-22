@@ -18,7 +18,7 @@ body{
     background: #f2f2f2;
    
 }
-header{
+#header{
     background: url(Modern\ Business\ Notion\ Header.png) no-repeat top right/cover;
     padding: 30px;
     border-bottom: 1px solid rgb(188, 188, 188);
@@ -360,17 +360,12 @@ header{
     border: none;
     border-radius: 12px;
     outline: none;
- Page_Home
+ 
 }
 
 
 /* Page_Home : */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-}
+
 section{
     display: flex;
     flex-direction: column;
@@ -455,10 +450,7 @@ section{
     color: #df0051;
 }
 
-=======
-    box-shadow: 4px 4px 10px #dbdcdb;
-    margin-right: 5px;
-}
+
 .add-com{
     border: none;
     padding: 10px;
@@ -515,5 +507,61 @@ section{
     font-weight: 800;
     font-size: 30px;
     color: red;
+}
+
+
+/*Header de la partie Home */
+
+
+.header{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.body{
+    width: 100%;
+    height: 120vh;
+    background-image: url(images/background\ home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#btn-Singup{
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+    background: transparent;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+#btn-Login{
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 4px 4px 10px #8b8c8b;
+}
+#Search{
+    background: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 4px 4px 10px #dbdcdb;
+}
+#Search > button {
+    cursor: pointer;
+    border: none;
+    padding: 5px 8px;
+    background: transparent;
+}
+#Input-search{
+    outline: none;
+    padding: 5px;
+    border: none;
 }
 
