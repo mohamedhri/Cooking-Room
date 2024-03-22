@@ -12,7 +12,7 @@
         <div class="navbar navbar-expand-md navbar-dark px-4 py-2 ">
         <div class="container">
                 <div class="navbar-brand ">
-                    <img src="/pngwing.com (1).png" width="100px" alt="">
+                    <img src="images/logo.png" width="100px" alt="">
                 </div>
 
             <button 
@@ -25,7 +25,7 @@
 
            <div class="collapse navbar-collapse" id="mainmenu">
             <div id="search" >
-                <button><img src="/search.png" width="16px" height="16px" alt=""></button>
+                <button><img src="icons/search.png" width="16px" height="16px" alt=""></button>
                 <input class=" mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="input-search">
             </div>
             <ul class="navbar-nav ms-auto">
@@ -52,14 +52,13 @@
                 </ul>
                 <div id="drop">
                     <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            All COUNTRIES
+                        <a  href="#" id="navbarDropdown"  aria-expanded="false">
+                                <h3>Filter by Category</h3>
+                                <select id="category-filter">
+                                    <option value="all">All</option>
+                                </select>
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        
                     </div>
                 </div>
             </div>
@@ -68,8 +67,8 @@
             </div>
     </div>
 
-    <div class="section-wrapper-recipes">
-        <div class="recipes" id="container">
+        <div class="section-wrapper-recipes">
+                <div class="recipes" id="container">
 
        
             
@@ -80,16 +79,23 @@
                     <div class="users" id="users">
                     </div>
                 </div>
-                <div class="filter-section">
-                    <h3>Filter by Category</h3>
-                    <select id="category-filter">
-                        <option value="all">All</option>
-                        
-                    </select>
+                <div class="wrapper-add">
+                    <div class="form">
+                        <label for="image_input" id="label-img"><img src="images/gallery.png" width="50%" alt=""></label>
+                        <input type="file" id="image_input">
+                        <input type="text" id="title_input" placeholder="Enter Title">
+                        <input type="text" id="title2_input" placeholder="Enter Subtitle ">
+                        <input type="text" id="description_input" placeholder="Enter Description">
+                        <input type="text" id="made_input" placeholder="Enter the Made of Recipe">
+                        <input type="text" id="likes_input">
+                        <input type="text" id="user_input" placeholder="Enter your full-Name ">
+                        <button id="send">send</button>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
-        <input type="file" id="P1">
+        <!-- <input type="file" id="P1">
         <input type="text" id="P2">
         <input type="text" id="P3">
         <input type="text" id="P4">
@@ -98,7 +104,27 @@
         <input type="text" id="P7">
         <input type="file" id="P8">
         <input type="text" id="P9">
-        <button id="send">send</button>
+        <button id="send">send</button> -->
+    </div>
+
+    <div class="show-card">
+        <div class="wrapper-show-card">
+            <div class="t-img">
+                <img src="ropa.jpeg" width="100%" alt="">
+            </div>
+            <div class="titre">
+                <h5 id="t1">the creame marocain</h5>
+                <h5 id="t2">salad perry</h5>
+                <h5 id="t3">made in morroco</h5>
+                <h5 id="t4">like <span id="t4-like">230</span></h5>
+                <div class="show-comments">
+                    <p>Most Comments</p>
+                    <h1>the best food</h1>
+                    <h1>the best food</h1>
+                    <h1>the best food</h1>
+                </div>
+            </div>
+        </div>
     </div>
 
 

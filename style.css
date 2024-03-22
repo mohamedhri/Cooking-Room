@@ -10,14 +10,16 @@ a{
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
+    position: relative;
 }
 body{
     width: 100%;
     height: 100vh;
     background: #f2f2f2;
+   
 }
 header{
-    background: url(/Modern\ Business\ Notion\ Header.png) no-repeat top right/cover;
+    background: url(Modern\ Business\ Notion\ Header.png) no-repeat top right/cover;
     padding: 30px;
     border-bottom: 1px solid rgb(188, 188, 188);
 }
@@ -195,8 +197,17 @@ header{
     align-items: center;
     justify-content: space-around;
     padding: 5px 0px;
+    position: relative;
 }
 .comments >h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #7f807f;
+    cursor: pointer;
+}
+.comments >button{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -260,22 +271,96 @@ header{
     border-right: .5px solid black;
 }
 /* mohamed haouari  */
-.filter-section {
+/* .filter-section {
     margin-top: 20px;
-}
+} */
 
-.filter-section h3 {
+/* .filter-section h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-}
+} */
 
 #category-filter {
     width: 100%;
-    padding: 8px;
+    padding: 7px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px;
+
+}
+.wrapper-add{
+    margin-top: 5px;
+    background: white;
+    color: red;
+    padding: 10px;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    border-radius: 12px;
+    text-align: center;
+}
+#image_input {
+    display: none;
+}
+#label-img{
+    padding: 10px;
+    border: 1px dashed red;
+    max-width: 150px;
+    cursor: pointer;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background: #f2efef;
+}
+.form > input {
+    max-width: 200px;
+    margin: 2px auto;
+    padding: 8px 10px;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    border: none;
+    border-radius: 8px;
+}
+.form > button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: 1px solid red;
+    border-radius: 12px ;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    color: red;
+    font-weight: 800;
+    transition: .6s;
+    text-transform: uppercase;
+}
+.form > button:hover{
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 12px ;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    background: red;
+    color: white;
+    font-weight: 800;
+}
+.parent-com{
+    position: absolute;
+    bottom: -40px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.182);
+    backdrop-filter:blur(20px);
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px #dbdcdb;
+    display: none;
+}
+.comments-card{
+    max-width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
     outline: none;
+ Page_Home
 }
 
 
@@ -368,5 +453,67 @@ section{
 
 #part >p >span{
     color: #df0051;
+}
+
+=======
+    box-shadow: 4px 4px 10px #dbdcdb;
+    margin-right: 5px;
+}
+.add-com{
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    color: rgb(189, 65, 65);
+    background: white;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 4px 4px 10px #dbdcdb;
+}
+.show-card{
+    width: 100%;
+    height: 100%;
+    background: #ffffff23;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    bottom: 1px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: none;
+}
+.wrapper-show-card{
+    width: 60%;
+    height: 80%;
+    background: url(Modern\ Business\ Notion\ Header.png);
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px #dbdcdb;
+}
+.t-img{
+    width: 20%;
+    border-radius: 12px;
+    background: #e9e7e7;
+    box-shadow: 8px 8px 10px #adaead;
+    margin: 20px 5px 10px 20px;
+}
+.t-img > img {
+    border-radius: 12px;
+}
+.titre > h5 ,.show-comments > h1{
+    width: 50%;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 2px auto;
+    padding: 10px 10px ;
+    background: white;
+    box-shadow: 4px 4px 10px #e1e1e1;
+    border-radius: 12px;
+}
+
+.show-comments > p{
+    font-weight: 800;
+    font-size: 30px;
+    color: red;
 }
 
