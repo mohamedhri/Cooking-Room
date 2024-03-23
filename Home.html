@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styles.css">
     <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
     <title>Home Page</title>
 </head>
-
-<body class="body">
-    <header class="header">
+<body>
+    <header>
         <div class="navbar navbar-expand-md navbar-dark px-4 py-2 ">
-            <div class="container">
+        <div class="container">
                 <div class="navbar-brand ">
-                    <img src="images/logo.png" width="100px" alt="">
+                    <img src="/pngwing.com (1).png" width="100px" alt="">
                 </div>
 
-                <button type="button" class="navbar-toggler" data-bs-target="#mainmenu" data-bs-toggle="collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button 
+                type="button"
+                class="navbar-toggler"
+                data-bs-target="#mainmenu"
+                data-bs-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="mainmenu">
-                    <div id="search">
-                        <button><img src="icons/search.png" width="16px" height="16px" alt=""></button>
-                        <input class=" mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                            id="input-search">
-                    </div>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="#" class="nav-link" id="btn-singup">SING UP </a></li>
-                        <li class="nav-item"><a href="#" class="nav-link" id="btn-login">LOGIN</a></li>
-                    </ul>
-                </div>
+           <div class="collapse navbar-collapse" id="mainmenu">
+            <div id="search" >
+                <button><img src="/search.png" width="16px" height="16px" alt=""></button>
+                <input class=" mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="input-search">
             </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="#" class="nav-link" id="btn-singup">SING UP </a></li>
+                <li class="nav-item"><a href="#" class="nav-link" id="btn-login">LOGIN</a></li>
+            </ul>
         </div>
-
+        </div>
+    </div>
+    
     </header>
 
     <section>
@@ -50,37 +51,32 @@
             <div>
                 <a href="index.html#form-section"><button id="btnAdd">ADD RECIPES</button></a>
                 
-   
+  
             </div>
+    </div>
+
+    <div class="images">
+        <div>
+            <img class= "img" src="images/téléchargement.jfif">
+        </div>
+        <div>
+            <img  class="img" src="images/téléchargement.jfif">
+        </div>
+        <div>
+            <img class="img" src="images/téléchargement.jfif">
+        </div>
+        <div>
+            <img class="img" src="images/téléchargement.jfif">
+        </div>
+        <div>
+            <button id="BtnDeExplore"> Explore recipes </button>
 
         </div>
 
-        <div class="images">
-            <div>
-                <img class="img" src="images/téléchargement.jfif">
-            </div>
-            <div>
-                <img class="img" src="images/téléchargement.jfif">
-            </div>
-            <div>
-                <img class="img" src="images/téléchargement.jfif">
-            </div>
-            <div>
-                <img class="img" src="images/téléchargement.jfif">
-            </div>
-            <div>
-                <button id="BtnDeExplore"> Explore recipes </button>
-
-            </div>
-
-
-
-        </div>
-
-    </section>
-
-
+   </div>
+      
     <script>src="script.js"</script>
+
 </body>
 
 </html>
