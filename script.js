@@ -1,93 +1,81 @@
 let ArryRecipes = [
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa.jpeg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
-        comments : [33,44,5,6,4,5,4,5],
+        likes: 20,
+        comments : [],
         country :"./icons/france.png",
         userName : "oussama charafi",
         category: "Salad"
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa1.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "Glasse apple",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
-        comments : [33,44,5,6,4,5,4,5],
+        likes: 100,
+        comments : [],
         country :"./icons/france.png",
         userName : "yassine oularbi",
         category: "Salad"
 
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa2.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "marocain pizza",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
-        comments : [33,44,5,6,4,5,4,5],
+        likes: 33,
+        comments : [],
         country :"./icons/france.png",
         userName : "salma baouch",
         category: "Pizza"
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa3.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
-        comments : [33,44,5,6,4,5,4,5],
+        likes: 50,
+        comments : [],
         country :"./icons/france.png",
         userName : "mohamed amine",
         category: "Pasta"
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa4.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 30,
-        comments : [33,44,5,6,4,5,4,5],
+        likes:23,
+        comments : [],
         country :"./icons/france.png",
         userName : "oussama charafi",
         category: "Chicken"
     },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 30,
-        comments : ["ss","ee",44.443,44,556,445,445,],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
+    
 ]
 
 
-let input1=document.getElementById("P1")
-let input2=document.getElementById("P2")
-let input3=document.getElementById("P3")
-let input4=document.getElementById("P4")
-let input5=document.getElementById("P5")
-let input6=document.getElementById("P6")
-let input7=document.getElementById("P7")
-let input8=document.getElementById("P8")
-let input9=document.getElementById("P9")
+let input1=document.getElementById("image_input")
+let input2=document.getElementById("title_input")
+let input3=document.getElementById("title2_input")
+let input4=document.getElementById("description_input")
+let input5=document.getElementById("made_input")
+let input6=document.getElementById("user_input")
+
+
+
 
 
 function AddCard(){
-
 
     const card = {
         photo: input1.files.length > 0 ? URL.createObjectURL(input1.files[0]) : '',
@@ -95,70 +83,193 @@ function AddCard(){
         title2:input3.value,
         descreption:input4.value,
         made:input5.value,
-        likes:input6.value,
-        comments:input7.value,
-        country:input8.files.length>0 ? URL.createObjectURL(input1.files[0]) : '',
-        userName:input9.value,
+        likes:20,
+        comments:[],
+        country:"./icons/france.png",
+        userName:input6.value,
     }
     
     ArryRecipes.push(card);
+    document.getElementById("alert").style.display = "flex"
+    input2.value = "";
+    input3.value = "";
+    input4.value = "";
+    input5.value = "";
+    input6.value = "";
 }
     
     document.getElementById("send").onclick = function(){
-        document.getElementById("container").innerHTML =""; 
-        document.getElementById("users").innerHTML ="";
-
-        let imgrecipes=document.getElementById('img-recipes');
-        input1.onchange=function(){
+       
+        let imgrecipes=document.getElementById('image_input');
+            input1.onchange=function(){
             imgrecipes.src=URL.createObjectURL(input1.files[0])
         }
     
         AddCard();
-        getData();
+        getData(recipes);
     }
+    document.getElementById("p-close").onclick = function(){
+     document.getElementById("alert").style.display = "none"
+    }
+
    
 
 
-
-
-function getData(){
-    for(let i = 0 ; i < ArryRecipes.length; i++){
-        document.getElementById("container").innerHTML += 
-    `
-    <div class="wrapper-recipes">
+    function getData(recipes) {
+        for (let i = 0; i < recipes.length; i++) {
+            document.getElementById("container").innerHTML +=
+                `
+            <div class="wrapper-recipes">
                 <div class="wrapper-card">
                     <div class="card-recipes">
                         <div class="img">
-                            <img src="${ArryRecipes[i].photo}" width="100%" alt="" id="img-recipes">
+                            <img src="${recipes[i].photo}" width="100%" alt="" id="img-recipes">
                         </div>
                         <div class="content-recipes">
-                            <h2>${ArryRecipes[i].title}
-                            </h2>
-                            <h3>${ArryRecipes[i].title2}<span>${ArryRecipes[i].made}</span></h3>
+                            <h2>${recipes[i].title}</h2>
+                            <h3>${recipes[i].title2}<span>${recipes[i].made}</span></h3>
                         </div>
-                            <div class="comments">
-                            <h3 class="commenters"><img src="icons/chat (1).png" width="20px">&nbsp;${ArryRecipes[i].comments.length}</h3>
-                            <h3 class="likes"><img src="/icons/love.png" width="20px">&nbsp;${ArryRecipes[i].likes}</h3>
-                            <h3 class="contry"><img src="${ArryRecipes[i].country}" width="20px"></h3>
-                            </div>
+                        <div class="comments">
+                            <span class="parent-com">
+                                <input type="text" class="comments-card" placeholder="Commenter">
+                                <button class="add-com"><img src="icons/send.png"/></button>
+                            </span>
+                            <h3 class="commenters"><img src="icons/chat.png" width="20px">&nbsp;${recipes[i].comments.length}</h3>
+                            <h3 class="likes"><img src="icons/love.png" width="20px">&nbsp;${recipes[i].likes}</h3>
+                            <h3 class="contry"><img src="${recipes[i].country}" width="20px"></h3>
+                        </div>
                     </div>
                 </div>
             </div>
-    `
-        document.getElementById("users").innerHTML +=
-        `
-        <div class="users-content" >
-            <div class="full-name">
-                <h4 id="user-img"><img src="/profile.png" width="25px" alt=""></h4>
-                <h4 id="user-name">${ArryRecipes[i].userName}</h4>
-                <h4 id="user-recipes">${ArryRecipes[i].title2}</h4>
-                <h4 id="status">Now</h4>
+        `;
+    
+            document.getElementById("users").innerHTML +=
+                `
+            <div class="users-content">
+                <div class="full-name">
+                    <h4 class="user-img"><img src="images/profile.png" width="25px" alt=""></h4>
+                    <h4 class="user-name">${recipes[i].userName}</h4>
+                    <h4 class="user-recipes">${recipes[i].title2}</h4>
+                    <h4 class="status">Now</h4>
+                </div>
             </div>
-        </div>
-        `
-}
+        `;
+            if(ArryRecipes.length <= 1000){
+                document.getElementById("all-views").innerHTML = ArryRecipes.length ;
+            }
+            else{
+                document.getElementById("all-views").innerHTML = ArryRecipes.length + "K";
+            }
+        
+        }
+        addCom();
     }
-getData();
+
+
+function addCom() {
+    document.querySelectorAll(".commenters").forEach(function (commentElement, index) {
+        const parentCom = document.querySelectorAll(".parent-com")[index];
+        parentCom.style.display = "none"
+        commentElement.addEventListener("click", () => {
+            if (parentCom.style.display === "none") {
+                parentCom.style.display = "flex";
+            } else {
+                parentCom.style.display = "none";
+            }
+        });
+    });
+
+    document.querySelectorAll(".add-com").forEach(function (element,index){
+        element.addEventListener("click", function(){
+            const indexElement = index;
+
+            const commentInput = document.querySelectorAll(".comments-card")[indexElement]; 
+            const comValue = commentInput.value;
+            ArryRecipes[indexElement].comments.push(comValue);
+
+            const parentCom = document.querySelectorAll(".parent-com")[indexElement];
+            parentCom.style.display = "none";
+
+            document.getElementById("container").innerHTML = "";
+            document.getElementById("users").innerHTML = "";
+            getData(ArryRecipes);
+
+            console.log(indexElement);
+        })
+    })
+
+}
+
+    
+    
+
+
+
+function paginate(array, page_size, page_number) {
+       
+    return array.slice((page_number - 1) * page_size, page_number * page_size);
+}
+
+
+function pagination(){
+
+document.addEventListener("DOMContentLoaded", function() {
+    const size = 6; 
+    let currentPage = 1;
+    getData(paginate(ArryRecipes, size, currentPage));
+    const paginationLinks = document.querySelectorAll(".page-link");
+    paginationLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const pageNumber = parseInt(e.target.innerText);
+
+            if (!isNaN(pageNumber)) {
+                currentPage = pageNumber;
+                document.getElementById("users").innerHTML ="";
+                document.getElementById("container").innerHTML ="" 
+                
+                getData(paginate(ArryRecipes, size, currentPage));
+            }
+
+        });
+       
+    });
+    document.getElementById("previous-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage > 1) {
+            currentPage--;
+            document.getElementById("users").innerHTML ="";
+            document.getElementById("container").innerHTML ="" 
+            getData(paginate(ArryRecipes, size, currentPage));
+        }
+    });
+    
+    document.getElementById("next-button").addEventListener("click", function(e) {
+        e.preventDefault();
+        if (currentPage > 0) {
+            currentPage++;
+            document.getElementById("users").innerHTML ="";
+            document.getElementById("container").innerHTML ="" 
+            getData(paginate(ArryRecipes, size, currentPage));
+        }
+    });
+  
+});
+
+
+}
+pagination();
+
+
+
+
+
+
+
+  
+
+
+
 
 
 function populateCategoryFilter() {
@@ -180,7 +291,8 @@ function populateCategoryFilter() {
 
 
 function filterRecipesByCategory(category) {
-    document.getElementById("container").innerHTML = ""; 
+    document.getElementById("container").innerHTML =""; 
+    document.getElementById("users").innerHTML ="";
 
     for (let i = 0; i < ArryRecipes.length; i++) {
         if (category === "all" || ArryRecipes[i].category === category) {
@@ -196,16 +308,34 @@ function filterRecipesByCategory(category) {
                                 <h3>${ArryRecipes[i].title2}<span>${ArryRecipes[i].made}</span></h3>
                             </div>
                             <div class="comments">
-                                <h3 class="commenters"><img src="icons/chat (1).png" width="20px">&nbsp;${ArryRecipes[i].comments.length}</h3>
-                                <h3 class="likes"><img src="/icons/love.png" width="20px">&nbsp;${ArryRecipes[i].likes}</h3>
-                                <h3 class="contry"><img src="${ArryRecipes[i].country}" width="20px"></h3>
-                            </div>
+                            <span class="parent-com">
+                                <input type="text" class="comments-card" placeholder="Commenter">
+                                <button class="add-com"><img src="icons/send.png"/></button>
+                            </span>
+                            <h3 class="commenters"><img src="icons/chat.png" width="20px">&nbsp;${ArryRecipes[i].comments.length}</h3>
+                            <h3 class="likes"><img src="icons/love.png" width="20px">&nbsp;${ArryRecipes[i].likes}</h3>
+                            <h3 class="contry"><img src="${ArryRecipes[i].country}" width="20px"></h3>
+                        </div>
                         </div>
                     </div>
                 </div>
             `;
+            document.getElementById("users").innerHTML +=
+        `
+        <div class="users-content" >
+            <div class="full-name">
+                <h4 id="user-img"><img src="images/profile.png" width="25px" alt=""></h4>
+                <h4 id="user-name">${ArryRecipes[i].userName}</h4>
+                <h4 id="user-recipes">${ArryRecipes[i].title2}</h4>
+                <h4 id="status">Now</h4>
+            </div>
+        </div>
+        `
+
+       
         }
     }
+    addCom();
 }
 populateCategoryFilter();
 
@@ -214,3 +344,15 @@ document.getElementById("category-filter").addEventListener("change", function()
     const selectedCategory = this.value;
     filterRecipesByCategory(selectedCategory);
 });
+
+
+
+function bubbleSort(){
+    ArryRecipes.sort(function(a , b){
+        return b.likes - a.likes;
+    })
+    document.getElementById("container").innerHTML =""; 
+    document.getElementById("users").innerHTML ="";
+    getData();
+}
+bubbleSort();
