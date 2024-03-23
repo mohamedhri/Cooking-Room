@@ -18,7 +18,7 @@ body{
     background: #f2f2f2;
    
 }
-header{
+#heade{
     background: url(/images/recettes.jpg) no-repeat top right/cover;
     padding: 30px;
     border-bottom: 1px solid rgb(188, 188, 188);
@@ -385,12 +385,7 @@ header{
 }
 
 /* Page_Home : */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-}
+
 section{
     display: flex;
     flex-direction: column;
@@ -413,7 +408,7 @@ section{
     margin-top: 15px;
     
 }
-#contenu{
+#part{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -474,6 +469,7 @@ section{
 #part >p >span{
     color: #df0051;
 }
+
 
 .add-com{
     border: none;
@@ -564,3 +560,58 @@ section{
     cursor: pointer;
     font-weight: 400;
 }
+/*Header de la partie Home */
+
+
+.header{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.body{
+    width: 100%;
+    height: 120vh;
+    background-image: url(images/Recette.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#btn-Singup{
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+    background: transparent;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+#btn-Login{
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 4px 4px 10px #8b8c8b;
+}
+#Search{
+    background: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 4px 4px 10px #dbdcdb;
+}
+#Search > button {
+    cursor: pointer;
+    border: none;
+    padding: 5px 8px;
+    background: transparent;
+}
+#Input-search{
+    outline: none;
+    padding: 5px;
+    border: none;
+}
+
