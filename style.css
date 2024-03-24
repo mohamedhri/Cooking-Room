@@ -600,6 +600,7 @@ section{
     border: none;
 }
 
+
 /* footer */
 
 .footer{
@@ -638,6 +639,93 @@ section{
     margin-bottom: 20px;
     color: gray;
 }
+
+  
+ /* Style pour la modale */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour le contenu de la modale */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Style pour le bouton de fermeture */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Style pour le titre de la modale */
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style pour le contenu de la modale */
+.modal-body {
+    margin-bottom: 20px;
+   
+        max-height: calc(100vh - 200px); /* Adjust the height as needed */
+        overflow-y: auto;
+    }
+
+
+/* Style pour les boutons dans la modale */
+.modal-buttons {
+    text-align: right;
+}
+
+/* Style pour le bouton de confirmation */
+.modal-confirm {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style pour le bouton de confirmation au survol */
+.modal-confirm:hover {
+    background-color: #45a049;
+}
+
+/* Style pour le bouton d'annulation */
+.modal-cancel {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style pour le bouton d'annulation au survol */
+.modal-cancel:hover {
+    background-color: #da190b;
+}
+
 .hide{
     display: none;
 }
+
