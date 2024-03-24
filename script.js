@@ -5,7 +5,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 20,
+        likes: 23,
         comments : [],
         country :"./icons/france.png",
         userName : "oussama charafi",
@@ -75,7 +75,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes: 50,
+        likes: 90,
         comments : [],
         country :"./icons/france.png",
         userName : "mohamed amine",
@@ -95,7 +95,7 @@ let ArryRecipes = [
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
         made : " made by morroco",
-        likes:23,
+        likes:278,
         comments : [],
         country :"./icons/france.png",
         userName : "oussama charafi",
@@ -183,8 +183,8 @@ function AddCard(){
                                 <input type="text" class="comments-card" placeholder="Commenter">
                                 <button class="add-com"><img src="icons/send.png"/></button>
                             </span>
-                            <h3 class="commenters"><img src="icons/chat.png" width="20px">&nbsp;${recipes[i].comments.length}</h3>
-                            <h3 class="likes"><img src="icons/love.png" width="20px">&nbsp;${recipes[i].likes}</h3>
+                            <h3 class="commenters"><img id="chat" src="icons/chat.png" width="20px">&nbsp;${recipes[i].comments.length}</h3>
+                            <h3 class="likes"><img id="love" src="icons/love.png" width="20px">&nbsp;${recipes[i].likes}</h3>
                             <h3 class="contry"><img src="${recipes[i].country}" width="20px"></h3>
                         </div>
                     </div>
@@ -213,6 +213,7 @@ function AddCard(){
         }
         addCom();
         search();
+        addLikes();
     }
    
 function search(){
@@ -265,8 +266,19 @@ function addCom() {
 
 }
 
-    
-    
+function addLikes(){
+    let coun = 0;
+    document.querySelectorAll(".likes").forEach((element , index)=>{
+        element.addEventListener("click", ()=>{
+            let i = index;
+            coun++;
+            ArryRecipes[i].likes +=coun; 
+            console.log(ArryRecipes[i].likes);
+            document.getElementById("container").innerHTML = "";
+            getData(ArryRecipes);
+        })
+    })
+}
 
 
 
@@ -412,15 +424,15 @@ document.getElementById("category-filter").addEventListener("change", function()
 
 
 
-// function bubbleSort(){
-//     ArryRecipes.sort(function(a , b){
-//         return b.likes - a.likes;
-//     })
-//     document.getElementById("container").innerHTML =""; 
-//     document.getElementById("users").innerHTML ="";
-//     getData();
-// }
-// bubbleSort();
+function bubbleSort(){
+    ArryRecipes.sort(function(a , b){
+        return b.likes - a.likes;
+    })
+    document.getElementById("container").innerHTML =""; 
+    document.getElementById("users").innerHTML ="";
+    getData();
+}
+bubbleSort();
 
 
 // Fonction pour afficher les détails du produit dans la modale

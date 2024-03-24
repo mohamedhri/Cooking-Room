@@ -358,7 +358,14 @@ body{
     border: none;
     border-radius: 12px;
     outline: none;
- 
+    margin-right: 10px;
+    box-shadow: 4px 4px 10px #dbdcdb;
+}
+.add-com{
+    transition: .8s;
+}
+.add-com:hover{
+    transform: rotate(45deg);
 }
 .pagin{
     display: flex;
@@ -728,4 +735,12 @@ section{
 .hide{
     display: none;
 }
-
+#love, #chat{
+    transition: .6s;
+}
+#love:hover{
+    transform: scale(1.3);
+}
+#chat:hover{
+    transform: scale(1.2);
+}
