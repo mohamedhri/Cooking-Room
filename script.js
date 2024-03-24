@@ -9,7 +9,15 @@ let ArryRecipes = [
         comments : [],
         country :"./icons/france.png",
         userName : "oussama charafi",
-        category: "Salad"
+        category: "Salad",
+        ingredients: [
+            "4 (6 ounce) fillets",
+            "2 tablespoons olive oil",
+            "2 tablespoons capers",
+            "1/8 teaspoon salt",
+            "1/8 teaspoon ground black pepper",
+            "4 slices lemon"
+        ]
     },
     {
         photo: "ropa.jpeg",
@@ -21,7 +29,24 @@ let ArryRecipes = [
         comments : [],
         country :"./icons/france.png",
         userName : "yassine oularbi",
-        category: "Salad"
+        category: "Salad",
+        ingredients: [
+            "2 boneless, skinless chicken breasts",
+            "2 tablespoons olive oil",
+            "1 teaspoon dried oregano",
+            "1 teaspoon garlic powder",
+            "Salt and black pepper to taste",
+            "1/2 cup cherry tomatoes, halved",
+            "1/2 cucumber, sliced",
+            "1/4 red onion, thinly sliced",
+            "1/4 cup Kalamata olives, pitted and halved",
+            "4 cups mixed salad greens",
+            "1/4 cup crumbled feta cheese",
+            "2 tablespoons balsamic vinegar",
+            "1 tablespoon lemon juice",
+            "1 tablespoon honey",
+            "2 tablespoons chopped fresh parsley"
+        ]
 
     },
     {
@@ -34,7 +59,15 @@ let ArryRecipes = [
         comments : [],
         country :"./icons/france.png",
         userName : "salma baouch",
-        category: "Pizza"
+        category: "Pizza",
+        ingredients: [
+            "4 (6 ounce) fillets",
+            "2 tablespoons olive oil",
+            "2 tablespoons capers",
+            "1/8 teaspoon salt",
+            "1/8 teaspoon ground black pepper",
+            "4 slices lemon"
+        ]
     },
     {
         photo: "ropa.jpeg",
@@ -46,7 +79,15 @@ let ArryRecipes = [
         comments : [],
         country :"./icons/france.png",
         userName : "mohamed amine",
-        category: "Pasta"
+        category: "Pasta",
+        ingredients: [
+            "4 (6 ounce) fillets",
+            "2 tablespoons olive oil",
+            "2 tablespoons capers",
+            "1/8 teaspoon salt",
+            "1/8 teaspoon ground black pepper",
+            "4 slices lemon"
+        ]
     },
     {
         photo: "ropa.jpeg",
@@ -58,7 +99,8 @@ let ArryRecipes = [
         comments : [],
         country :"./icons/france.png",
         userName : "oussama charafi",
-        category: "Chicken"
+        category: "Chicken",
+        
     },
     {
         photo: "ropa.jpeg",
@@ -189,6 +231,8 @@ let input3=document.getElementById("title2_input")
 let input4=document.getElementById("description_input")
 let input5=document.getElementById("made_input")
 let input6=document.getElementById("user_input")
+let input7=document.getElementById("category")
+
 
 
 
@@ -209,6 +253,17 @@ function AddCard(){
     }
     
     ArryRecipes.push(card);
+<<<<<<< refs/remotes/origin/Recettes
+=======
+    document.getElementById("alert").style.display = "flex"
+    input2.value = "";
+    input3.value = "";
+    input4.value = "";
+    input5.value = "";
+    input6.value = "";
+    input7.value = "";
+
+>>>>>>> local
 }
     
     document.getElementById("send").onclick = function(){
@@ -449,12 +504,134 @@ document.getElementById("category-filter").addEventListener("change", function()
 
 
 
-function bubbleSort(){
-    ArryRecipes.sort(function(a , b){
-        return b.likes - a.likes;
-    })
-    document.getElementById("container").innerHTML =""; 
-    document.getElementById("users").innerHTML ="";
-    getData();
+// function bubbleSort(){
+//     ArryRecipes.sort(function(a , b){
+//         return b.likes - a.likes;
+//     })
+//     document.getElementById("container").innerHTML =""; 
+//     document.getElementById("users").innerHTML ="";
+//     getData();
+// }
+// bubbleSort();
+
+
+// Fonction pour afficher les détails du produit dans la modale
+function showProductDetails(
+    ingredientsTab,
+    directionsTab,
+    timeTab,
+    servingTab,
+    nutritionTab
+) {
+    // Mettre à jour les éléments de la modale avec les détails du produit
+    ingredientsTab.innerHTML = `
+        <h3>Ingredients</h3>
+        <ul>
+            <li>4 (6 ounce) fillets</li>
+            <li>salmon 2 tablespoons olive oil</li>
+            <li>2 tablespoons capers</li>
+            <li>1/8 teaspoon salt</li>
+            <li>1/8 teaspoon ground black pepper</li>
+            <li>4 slices lemon</li>
+        </ul>
+    `;
+
+    directionsTab.innerHTML = `
+        <h3>Directions</h3>
+        <p>
+            Preheat a large heavy skillet over medium heat for 3 minutes.
+            <br /><br />
+            Coat salmon with olive oil. Place in skillet, and increase heat to high. Cook for 3 minutes. Sprinkle with capers, and salt and pepper. Turn salmon over, and cook for 5 minutes, or until browned. Salmon is done when it flakes easily with a fork.<br /><br />
+            Transfer salmon to individual plates, and garnish with lemon slices.
+        </p>
+    `;
+
+    timeTab.innerHTML = `
+        <h3>Estimated Time</h3>
+        <ul>
+            <li>10m preparation time</li>
+            <li>10m cooking time</li>
+            <li>20m total</li>
+        </ul>
+    `;
+
+    servingTab.innerHTML = `
+        <h3>Servings</h3>
+        <p>
+            This specific recipe serves up to four people. Adjust it accordingly to suit the specific needs of your party.
+        </p>
+    `;
+
+    nutritionTab.innerHTML = `
+        <h3>Nutritional Value</h3>
+        <p><i>Based on a 2000 calorie diet</i></p>
+        <ul>
+            <li>Calories: 371 kcal 19%</li>
+            <li>Fat: 25.1 g 39%</li>
+            <li>Carbs: 1.7g 1%</li>
+            <li>Protein: 33.7 g 67%</li>
+            <li>Cholesterol: 99 mg 33%</li>
+            <li>Sodium: 300 mg 12%</li>
+        </ul>
+    `;
+
+    // Afficher la modale
+    $("#productModal").modal("show");
 }
-bubbleSort();
+
+// Ajouter un gestionnaire d'événement de clic pour chaque colonne
+let columns = document.querySelectorAll("#container");
+columns.forEach((column) => {
+    column.addEventListener("click", function () {
+    
+        let ingredientsTab = document.getElementById("ingredients");
+        let directionsTab = document.getElementById("directions");
+        let timeTab = document.getElementById("time");
+        let servingTab = document.getElementById("serving");
+        let nutritionTab = document.getElementById("nutrition");
+
+        // Afficher les détails du produit dans la modale
+        showProductDetails(
+            ingredientsTab,
+            directionsTab,
+            timeTab,
+            servingTab,
+            nutritionTab
+        );
+    });
+});
+
+// Fonction pour changer d'onglet dans la modale
+function salmon(evt, recipe) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(recipe).style.display = "flex";
+    evt.currentTarget.className += " active";
+}
+
+
+// Afficher la modale
+function showModal() {
+    document.querySelector('.modal').style.display = 'flex';
+}
+
+// Ajouter un gestionnaire d'événement pour le bouton de fermeture
+document.querySelector('.btn-close').addEventListener('click', hideModal);
+
+// Ajouter un gestionnaire d'événement pour le bouton de confirmation
+document.querySelector('.modal-confirm').addEventListener('click', function() {
+    // Code à exécuter lors de la confirmation
+    hideModal();
+});
+
+
