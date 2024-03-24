@@ -1,6 +1,6 @@
 let ArryRecipes = [
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa.jpeg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
@@ -20,7 +20,7 @@ let ArryRecipes = [
         ]
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa1.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "Glasse apple",
         descreption : "Salade nesoiase",
@@ -50,7 +50,7 @@ let ArryRecipes = [
 
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa2.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "marocain pizza",
         descreption : "Salade nesoiase",
@@ -70,7 +70,7 @@ let ArryRecipes = [
         ]
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa3.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
@@ -90,7 +90,7 @@ let ArryRecipes = [
         ]
     },
     {
-        photo: "ropa.jpeg",
+        photo: "images/ropa4.jpg",
         title : "Cream prawen,inspired by morocco",
         title2 : "salade Perry",
         descreption : "Salade nesoiase",
@@ -102,126 +102,7 @@ let ArryRecipes = [
         category: "Chicken",
         
     },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
-    {
-        photo: "ropa.jpeg",
-        title : "Cream prawen,inspired by morocco",
-        title2 : "salade Perry",
-        descreption : "Salade nesoiase",
-        made : " made by morroco",
-        likes: 230,
-        comments : [],
-        country :"./icons/france.png",
-        userName : "oussama charafi",
-        category: "Soup"
-    },
+    
 ]
 
 
@@ -253,29 +134,33 @@ function AddCard(){
     }
     
     ArryRecipes.push(card);
-<<<<<<< refs/remotes/origin/Recettes
-=======
+
     document.getElementById("alert").style.display = "flex"
     input2.value = "";
     input3.value = "";
     input4.value = "";
     input5.value = "";
     input6.value = "";
+
     input7.value = "";
 
->>>>>>> local
+
 }
     
     document.getElementById("send").onclick = function(){
        
         let imgrecipes=document.getElementById('image_input');
-        input1.onchange=function(){
+            input1.onchange=function(){
             imgrecipes.src=URL.createObjectURL(input1.files[0])
         }
     
         AddCard();
         getData(recipes);
     }
+    document.getElementById("p-close").onclick = function(){
+     document.getElementById("alert").style.display = "none"
+    }
+
    
 
 
@@ -318,14 +203,38 @@ function AddCard(){
                 </div>
             </div>
         `;
+            if(ArryRecipes.length <= 1000){
+                document.getElementById("all-views").innerHTML = ArryRecipes.length ;
+            }
+            else{
+                document.getElementById("all-views").innerHTML = ArryRecipes.length + "K";
+            }
+        
         }
         addCom();
+        search();
     }
-
-
+   
+function search(){
+    let cardElements = document.querySelectorAll('.wrapper-recipes');
+    let search = document.getElementById("input-search");
+    cardElements.forEach((element, index) => {
+        ArryRecipes[index].element = element;
+    });
+    search.addEventListener("input", e => {
+        let value = e.target.value.toLowerCase();
+        
+        ArryRecipes.forEach(card => {
+            let found = card.title.toLowerCase().includes(value) || card.title2.toLowerCase().includes(value) || card.descreption.toLowerCase().includes(value);
+            card.element.classList.toggle("hide", !found)
+        });
+    });
+}
+  
 function addCom() {
     document.querySelectorAll(".commenters").forEach(function (commentElement, index) {
         const parentCom = document.querySelectorAll(".parent-com")[index];
+        parentCom.style.display = "none"
         commentElement.addEventListener("click", () => {
             if (parentCom.style.display === "none") {
                 parentCom.style.display = "flex";
@@ -348,7 +257,7 @@ function addCom() {
 
             document.getElementById("container").innerHTML = "";
             document.getElementById("users").innerHTML = "";
-            getData();
+            getData(ArryRecipes);
 
             console.log(indexElement);
         })
@@ -411,7 +320,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
 });
-
 
 
 }
@@ -579,6 +487,7 @@ function showProductDetails(
     $("#productModal").modal("show");
 }
 
+
 // Ajouter un gestionnaire d'événement de clic pour chaque colonne
 let columns = document.querySelectorAll("#container");
 columns.forEach((column) => {
@@ -633,5 +542,9 @@ document.querySelector('.modal-confirm').addEventListener('click', function() {
     // Code à exécuter lors de la confirmation
     hideModal();
 });
+
+bubbleSort();
+
+
 
 

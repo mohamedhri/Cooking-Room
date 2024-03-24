@@ -11,7 +11,7 @@
 
 <body class="body">
     <header class="header">
-        <div class="navbar navbar-expand-md navbar-dark px-4 py-2 ">
+        <div class="navbar navbar-expand-md navbar-dark px-4 py-2">
             <div class="container">
                 <div class="navbar-brand ">
                     <img src="images/logo.png" width="100px" alt="">
@@ -22,11 +22,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="mainmenu">
-                    <div id="search">
-                        <button><img src="icons/search.png" width="16px" height="16px" alt=""></button>
-                        <input class=" mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                            id="input-search">
-                    </div>
+                   
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="#" class="nav-link" id="btn-singup">SING UP </a></li>
                         <li class="nav-item"><a href="#" class="nav-link" id="btn-login">LOGIN</a></li>
@@ -39,35 +35,33 @@
 
     <section>
 
-        <div class=container>
-            <div id="part">
-                <h1 class=titre>Health Requires</h1>
-                <h1 class=titre>Healthy food</h1>
-                <p><br>Manage your recipes the easy way </p>
-                <p>Share recipes with your friends and discover new ones.<br>
-                    More than <span>15,000 recipes </span>from around the world </p>
+        <div class="container">
+            <div id="part" class="text-center mt-5">
+                <h1 class="titre display-1" style="font-size: 65px; margin: 0;" >Health Requires</h1>
+                <h1 class="titre display-1" style="font-size: 65px; margin: 0;">Healthy food</h1>
+                <p class="mt-3">Manage your recipes the easy way.<br><br> Share recipes with your friends and discover new ones.<br>
+                    More than <span>15,000 recipes</span> from around the world.</p>
             </div>
             <div>
-                <button id="btnAdd">ADD RECIPES</button>
+                <a href="index.html#form-section"><button id="btnAdd">ADD RECIPES</button></a>
             </div>
-
         </div>
 
         <div class="images">
             <div>
-                <img class="img" src="images/téléchargement.jfif">
+                <img class="img" src="images/ropa1.jpg">
             </div>
             <div>
-                <img class="img" src="images/téléchargement.jfif">
+                <img class="img" src="images/ropa2.jpg">
             </div>
             <div>
-                <img class="img" src="images/téléchargement.jfif">
+                <img class="img" src="images/ropa3.jpg">
             </div>
             <div>
-                <img class="img" src="images/téléchargement.jfif">
+                <img class="img" src="images/ropa4.jpg">
             </div>
-            <div>
-                <button id="BtnDeExplore"> Explore recipes </button>
+            <div class="BtnExplore">
+                  <a class="hrefExplore"  href="index.html">Explore<br> recipes</a>
 
             </div>
 
@@ -77,8 +71,30 @@
 
     </section>
 
+    <hr>
+    <footer class="footer">
+        <div class="links">
+            <li href="#">Explore</li>
+            <li href="#">What</li>
+            <li href="#">Help & Feedback</li>
+            <li href="#">Contact</li>
 
-    <script src="Script.js"></script>
+        </div>
+
+        <div class="icons">
+            <img src="/icons/email.png" alt="">
+            <img src="icons/facebook.png" alt="">
+            <img src="icons/twitter.png" alt="">
+        </div>
+        
+    </footer>
+    <div class="copyghit">
+        <p>© 2024 comapnt .All rights and copy rights rederved</p>
+    </div>
+
+
+
+    <script>src="script.js"</script>
 </body>
 
 </html>

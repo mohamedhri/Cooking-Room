@@ -18,14 +18,14 @@ body{
     background: #f2f2f2;
    
 }
-#header{
-    background: url(Modern\ Business\ Notion\ Header.png) no-repeat top right/cover;
+#heade{
+    background: url(/images/recettes.jpg) no-repeat top right/cover;
     padding: 30px;
     border-bottom: 1px solid rgb(188, 188, 188);
 }
 #btn-singup{
     color: red;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     background: transparent;
     border-radius: 30px;
@@ -33,12 +33,12 @@ body{
 }
 #btn-login{
     color: red;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     background: white;
     border-radius: 30px;
     padding: 10px 20px;
-    box-shadow: 4px 4px 10px #8b8c8b;
+    box-shadow: 2px 2px 10px #d5d6d5;
 }
 #search{
     background: white;
@@ -106,7 +106,7 @@ body{
     border: 1px solid transparent;
     transition: .5s;
 }
-.list-a > li > a:hover{
+.list-a > li > a:hover ,#all{
     color: red;
     border: 1px solid #7f807f;
     border-radius: 20px;
@@ -136,7 +136,7 @@ body{
     padding-left: 100px;
 }
 .views > h1 > span {
-    color: black;
+    color: rgb(255, 0, 0);
     font-weight: 700;
 }
 .section-wrapper-recipes{
@@ -165,17 +165,17 @@ body{
     box-shadow: 4px 4px 10px #dbdcdb;
 }
 .card-recipes{
-    max-width: 205px;
+    width: 205px;
 }
 .img{
     width: 80%;
-    background: white;
     margin: 0 auto;
-    box-shadow: 4px 4px 10px #dbdcdb;
 }
 #img-recipes{
     margin-top: -50px;
+    height: 150px;
     border-radius: 5px;
+    box-shadow: 8px 8px 10px #787777;
 }
 .content-recipes{
     width: 90%;
@@ -285,8 +285,8 @@ body{
     padding: 7px;
     border: 1px solid #ccc;
     border-radius: 25px;
-
 }
+
 .wrapper-add{
     margin-top: 5px;
     background: white;
@@ -357,7 +357,8 @@ body{
     padding: 10px;
     border: none;
     border-radius: 12px;
-    outline: none
+    outline: none;
+ 
 }
 .pagin{
     display: flex;
@@ -407,7 +408,7 @@ section{
     margin-top: 15px;
     
 }
-#contenu{
+#part{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -439,32 +440,17 @@ section{
 #btnAdd:hover {
     background-color: #ec1fd8; /* Darker green on hover */
 }
-#BtnDeExplore {
-    border: none;
-    background-color: #fff;
-    color: #000;
-    padding: 10px 20px;
+.hrefExplore{
+    color:#df0051;
     font-size: 16px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    position: relative;
+    
 }
-#BtnDeExplore::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -20px; /* Extends line 20px to the left */
-    width: calc(100% + 40px); /* Extends line 20px on both sides */
-    height: 2px;
-    background-color: #000;
-    transition: 0.3s;
+.BtnExplore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
 }
-
-#BtnDeExplore:hover::after {
-    width: calc(100% + 40px); /* Maintain extended width on hover */
-}
-
 #part >p >span{
     color: #df0051;
 }
@@ -528,7 +514,37 @@ section{
     color: red;
 }
 
-
+.alert{
+    display: flex;
+    margin: 0 auto;
+    position: fixed;
+    left: 430px;
+    top: 20px;
+    background:rgb(198, 232, 198);
+    color: green;
+    font-weight: 700;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgb(107, 107, 107);
+    align-items: center;
+    justify-content: center;
+    transition: .8s;
+    display: none;
+}
+.alert > h1{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.alert > p {
+    padding-top: 7px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    font-weight: 400;
+}
 /*Header de la partie Home */
 
 
@@ -541,7 +557,7 @@ section{
 .body{
     width: 100%;
     height: 120vh;
-    background-image: url(images/background\ home.png);
+    background-image: url(images/Recette.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -584,8 +600,7 @@ section{
     border: none;
 }
 
-<<<<<<< refs/remotes/origin/Recettes
-=======
+
 /* footer */
 
 .footer{
@@ -709,4 +724,8 @@ section{
 .modal-cancel:hover {
     background-color: #da190b;
 }
->>>>>>> local
+
+.hide{
+    display: none;
+}
+

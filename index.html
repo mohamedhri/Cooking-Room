@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="style.css">
-    <title>O</title>
+    <link rel="icon" href="images/logo.png" type="image/icon type">
+    <title>SOUMA FOOD</title>
 </head>
 
 <body>
-    <header id="header">
+
+    <div class="alert alert-primary" id="alert">
+        <h1 class="message"><img src="icons/checked.png" width="20px" alt=""> the recipe added with success</h1>
+        <p id="p-close">X</p>
+    </div>
+
+    <header id="heade">
         <div class="navbar navbar-expand-md navbar-dark px-4 py-2 ">
             <div class="container">
                 <div class="navbar-brand ">
@@ -43,12 +50,10 @@
     <div class="section-navbar-main">
         <div class="wrapper-main-navbar">
             <ul class="list-a">
-                <li><a href="">All</a></li>
-                <li><a href="">home</a></li>
-                <li><a href="">home</a></li>
-                <li><a href="">home</a></li>
-                <li><a href="">home</a></li>
-                <li><a href="">home</a></li>
+                <li><a href="" id="all">All</a></li>
+                <li><a href="Home.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+
             </ul>
             <div id="drop">
                 <div class="dropdown">
@@ -63,7 +68,7 @@
             </div>
         </div>
         <div class="views">
-            <h1>You have <span id="all-views"> 22.038k </span> to Recipes Explore</h1>
+            <h1>You have <span id="all-views"></span> to Recipes Explore</h1>
         </div>
     </div>
     <div class="pagin">
@@ -77,40 +82,46 @@
 
         </div>
 
-        <div class="humains">
-            <div class="wrapper-users">
-                <h3 id="users-title">Users Recipes</h3>
-                <div class="users" id="users">
+       <div class="humains">
+
+                <div class="wrapper-users">
+                    <h3 id="users-title">Users Recipes</h3>
+                    <div class="users" id="users">
+                    </div>
                 </div>
-            </div>
-            <div class="wrapper-add">
-                <div class="form">
-                    <h3 id="users-title">Add Recipe</h3>
 
-                    <label for="image_input" id="label-img"><img src="icons/image-gallery.png" width="100%" alt=""></label>
-                    <input type="file" id="image_input">
+                <div class="wrapper-add">
+                    <div class="form" id="form-section">
+                        <h3 id="users-title">Add Recipe</h3>
 
-                    <input type="text" id="title_input" placeholder="Enter Title">
+                        <label for="image_input" id="label-img"><img src="icons/image-gallery.png" width="100%" alt=""></label>
+                        <input type="file" id="image_input">
 
-                    <input type="text" id="title2_input" placeholder="Enter Subtitle ">
+                        <input type="text" id="title_input" placeholder="Enter Title">
 
-                    <input type="text" id="description_input" placeholder=" Enter the Made of Recipe">
+                        <input type="text" id="title2_input" placeholder="Enter Subtitle ">
 
-<<<<<<< refs/remotes/origin/Recettes
+                        <input type="text" id="description_input" placeholder=" Enter the Made of Recipe">
+
+                        <input type="text" id="made_input" placeholder="Enter Description">
+
                     <input type="text" id="made_input" placeholder="Enter Description">
-=======
-                        <input type="text" id="user_input" placeholder="Enter your full-Name ">
+                      
                         <input type="text" id="category" placeholder="Enter the category ">
->>>>>>> local
 
-                    <input type="text" id="user_input" placeholder="Enter your full-Name ">
-                    
-                    <button class="btn btn-outline-danger" id="send">Send</button>
+                        <input type="text" id="user_input" placeholder="Enter your full-Name ">
+
+
+                        <button class="btn btn-outline-danger" id="send">Send</button>
+                    </div>
                 </div>
-            </div>
         </div>
-       
+
+
+        </div>
+
     </div>
+
     <div class="w3-center w3-padding-32" id="numero">
         <div class="w3-bar ">
             <a href="#" id="previous-button" class="w3-bar-item w3-button w3-hover-black">&laquo;</a>
@@ -126,19 +137,8 @@
             <a href="#" id="next-button" class="w3-bar-item w3-button w3-hover-black">&raquo;</a>
         </div>
     </div>
-</div>
+    </div>
  
-    
-    <!-- <input type="file" id="P1">
-        <input type="text" id="P2">
-        <input type="text" id="P3">
-        <input type="text" id="P4">
-        <input type="text" id="P5">
-        <input type="number" id="P6">
-        <input type="text" id="P7">
-        <input type="file" id="P8">
-        <input type="text" id="P9">
-        <button id="send">send</button> -->
     </div>
     <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -170,25 +170,26 @@
     </div>
     
 
-    <div class="show-card">
-        <div class="wrapper-show-card">
-            <div class="t-img">
-                <img src="ropa.jpeg" width="100%" alt="">
-            </div>
-            <div class="titre">
-                <h5 id="t1">the creame marocain</h5>
-                <h5 id="t2">salad perry</h5>
-                <h5 id="t3">made in morroco</h5>
-                <h5 id="t4">like <span id="t4-like">230</span></h5>
-                <div class="show-comments">
-                    <p>Most Comments</p>
-                    <h1>the best food</h1>
-                    <h1>the best food</h1>
-                    <h1>the best food</h1>
-                </div>
 
-            </div>
+    <hr>
+    <footer class="footer">
+        <div class="links">
+            <li href="#">Explore</li>
+            <li href="#">What</li>
+            <li href="#">Help & Feedback</li>
+            <li href="#">Contact</li>
+
         </div>
+
+        <div class="icons">
+            <img src="/icons/email.png" alt="">
+            <img src="icons/facebook.png" alt="">
+            <img src="icons/twitter.png" alt="">
+        </div>
+        
+    </footer>
+    <div class="copyghit">
+        <p>© 2024 comapnt .All rights and copy rights rederved</p>
     </div>
 
 
