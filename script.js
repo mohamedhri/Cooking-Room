@@ -163,9 +163,25 @@ function AddCard(){
         
         }
         addCom();
+        search();
     }
-
-
+   
+function search(){
+    let cardElements = document.querySelectorAll('.wrapper-recipes');
+    let search = document.getElementById("input-search");
+    cardElements.forEach((element, index) => {
+        ArryRecipes[index].element = element;
+    });
+    search.addEventListener("input", e => {
+        let value = e.target.value.toLowerCase();
+        
+        ArryRecipes.forEach(card => {
+            let found = card.title.toLowerCase().includes(value) || card.title2.toLowerCase().includes(value) || card.descreption.toLowerCase().includes(value);
+            card.element.classList.toggle("hide", !found)
+        });
+    });
+}
+  
 function addCom() {
     document.querySelectorAll(".commenters").forEach(function (commentElement, index) {
         const parentCom = document.querySelectorAll(".parent-com")[index];
@@ -356,3 +372,6 @@ function bubbleSort(){
     getData();
 }
 bubbleSort();
+
+
+

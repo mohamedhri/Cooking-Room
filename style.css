@@ -638,5 +638,6 @@ section{
     margin-bottom: 20px;
     color: gray;
 }
-
-
+.hide{
+    display: none;
+}
