@@ -130,6 +130,7 @@ function AddCard(){
         likes:20,
         comments:[],
         country:"./icons/france.png",
+        category:input7.value,
         userName:input6.value,
     }
     
@@ -141,7 +142,6 @@ function AddCard(){
     input4.value = "";
     input5.value = "";
     input6.value = "";
-
     input7.value = "";
 
 
@@ -219,6 +219,7 @@ function AddCard(){
 function search(){
     let cardElements = document.querySelectorAll('.wrapper-recipes');
     let search = document.getElementById("input-search");
+    
     cardElements.forEach((element, index) => {
         ArryRecipes[index].element = element;
     });
@@ -226,12 +227,24 @@ function search(){
         let value = e.target.value.toLowerCase();
         
         ArryRecipes.forEach(card => {
-            let found = card.title.toLowerCase().includes(value) || card.title2.toLowerCase().includes(value) || card.descreption.toLowerCase().includes(value);
+            let found = card.category.toLowerCase().includes(value);
             card.element.classList.toggle("hide", !found)
         });
+
+         let at = ArryRecipes.slice().filter(data =>{
+            return data.category.toLowerCase().includes(value);
+
+         }).length;
+         document.getElementById("all-views").innerHTML = at;
+        
+        
+        
     });
 }
-  
+  /* at.filter(data=> {   
+
+         }   
+            ) */
 function addCom() {
     document.querySelectorAll(".commenters").forEach(function (commentElement, index) {
         const parentCom = document.querySelectorAll(".parent-com")[index];
@@ -424,7 +437,7 @@ document.getElementById("category-filter").addEventListener("change", function()
 
 
 
-function bubbleSort(){
+/* function bubbleSort(){
     ArryRecipes.sort(function(a , b){
         return b.likes - a.likes;
     })
@@ -432,7 +445,7 @@ function bubbleSort(){
     document.getElementById("users").innerHTML ="";
     getData();
 }
-bubbleSort();
+bubbleSort(); */
 
 
 // Fonction pour afficher les détails du produit dans la modale
